@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autos El Camino</title>
+  <link rel="icon" href="img/logoCar.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Hero image con filtro oscuro */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    /* Imagenes uniformes en cards */
+    .card-img-top {
+      height: 220px;      /* altura fija */
+      width: 100%;
+      object-fit: cover;  /* rellena y recorta sin deformar */
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">AUTOS EL CAMINO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuAutos">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menuAutos">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menú Principal</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MODELO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Financiamiento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactos.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO IMAGE (carrusel) -->
+<section class="hero">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crv1.jpeg') center/cover no-repeat; height: 100vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
+          <div class="container">
+            <h1 class="display-4 fw-bold">Conduce tu Futuro</h1>
+            <p class="lead">Autos nuevos y usados certificados con las mejores garantías del mercado</p>
+            <a href="#modelos" class="btn btn-primary btn-lg mt-3">Ver Modelos</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('corolla.jpeg') center/cover no-repeat; height: 100vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
+          <div class="container">
+            <h1 class="display-4 fw-bold">Encuentra el Auto Perfecto</h1>
+            <p class="lead">Variedad, calidad y precios accesibles para ti</p>
+            <a href="#modelos" class="btn btn-primary btn-lg mt-3">Ver Modelos</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Ford.jpeg') center/cover no-repeat; height: 100vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
+          <div class="container">
+            <h1 class="display-4 fw-bold">Tu Mejor Opción en Autos</h1>
+            <p class="lead">Garantía y confianza en cada compra</p>
+            <a href="#modelos" class="btn btn-primary btn-lg mt-3">Ver Modelos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SECCIÓN DE MODELOS -->
+<section id="modelos" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Nuestros Modelos</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="corolla1.jpg" class="card-img-top" alt="Modelo 1">
+          <div class="card-body">
+            <h5 class="card-title">Toyota Corolla 2022</h5>
+            <p class="card-text">Eficiente, moderno y perfecto para ciudad. Precio: $18,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="crv.png" class="card-img-top" alt="Modelo 2">
+          <div class="card-body">
+            <h5 class="card-title">Honda CR-V 2021</h5>
+            <p class="card-text">SUV familiar con excelente rendimiento. Precio: $22,500</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="ford1.jpeg" class="card-img-top" alt="Modelo 3">
+          <div class="card-body">
+            <h5 class="card-title">Ford Mustang 2023</h5>
+            <p class="card-text">Deportivo de alto rendimiento. Precio: $35,000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN DE FINANCIAMIENTO -->
+<section id="financiamiento" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Opciones de Financiamiento</h2>
+    <p class="text-center">Contamos con planes accesibles a tu medida, sin prima inicial y con tasas competitivas.</p>
+    <div class="text-center">
+    </div>
+  </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer class="text-center py-4 border-top mt-5">
+  Creado por Autos El Camino &middot; &copy; 2025
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
